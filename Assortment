@@ -1,0 +1,179 @@
+Q1
+
+
+#include <stdio.h>
+
+int main() {
+    int size;
+
+    
+    printf("Enter the array's size: ");
+    scanf("%d", &size);
+
+    int arr[size];
+
+  
+    printf("Enter array's elements:\n");
+    for (int i = 0; i < size; i++) {
+        printf("a[%d] = ", i);
+        scanf("%d", &arr[i]);
+    }
+
+   
+    printf("Negative elements in the array are:\n");
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+    printf("\n")
+}
+
+
+Q2
+
+
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+ printf("Enter the array's row size: ");
+    scanf("%d", &rows);
+    printf("Enter the array's column size: ");
+    scanf("%d", &cols);
+
+    
+    int arr[rows][cols];
+
+    
+    printf("Enter array's elements:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    
+    int largest = arr[0][0];
+
+    
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (arr[i][j] > largest) {
+                largest = arr[i][j];
+            }
+        }
+    }
+
+    
+    printf("The largest element in the array is: %d\n", largest);
+
+    return 0;
+}
+
+}
+
+
+Q3
+
+
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    
+    printf("Enter the array's row size: ");
+    scanf("%d", &rows);
+    printf("Enter the array's column size: ");
+    scanf("%d", &cols);
+
+    
+    int arr[rows][cols];
+    int transpose[cols][rows];
+
+    
+    printf("Enter array's elements:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            transpose[j][i] = arr[i][j];
+        }
+    }
+
+    
+    printf("Transpose of the array is:\n");
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+Q4
+
+
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+    
+    
+    printf("Enter the array's row size: ");  scanf("%d", &rows);
+    printf("Enter the array's column size: ");
+    scanf("%d", &cols);
+
+    
+    int arr[rows][cols];
+
+   
+    printf("Enter array's elements:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    
+    int rowIndex, colIndex;
+    printf("Enter the row index to find the sum: ");
+    scanf("%d", &rowIndex);
+    printf("Enter the column index to find the sum: ");
+    scanf("%d", &colIndex);
+
+    
+    if (rowIndex < 0 || rowIndex >= rows || colIndex < 0 || colIndex >= cols) {
+        printf("Invalid row or column index.\n");
+        return 1; // Exit with an error code
+    }
+
+   
+    int rowSum = 0;
+    for (int j = 0; j < cols; j++) {
+        rowSum += arr[rowIndex][j];
+    }
+
+     int colSum = 0;
+    for (int i = 0; i < rows; i++) {
+        colSum += arr[i][colIndex];
+    }
+
+    
+    printf("Sum of elements in row %d: %d\n", rowIndex, rowSum);
+    printf("Sum of elements in column %d: %d\n", colIndex, colSum);
+
+    return 0;
+}
