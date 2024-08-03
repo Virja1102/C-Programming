@@ -1,0 +1,85 @@
+Q.1
+
+#include <stdio.h>
+
+int main() {
+    
+    float celsius, fahrenheit;
+
+   
+    printf("Enter temperature in Celsius: ");
+    
+    
+    scanf("%f", &celsius);
+
+    
+    fahrenheit = (9.0 / 5.0) * celsius + 32.0;
+
+   
+    printf("%.2f Celsius is equal to %.2f Fahrenheit\n", celsius, fahrenheit);
+
+    
+}
+
+Q.2
+
+#include<stdio.h>
+
+int main() {
+   
+    float baseSalary, hrPercentage, dPercentage, tPercentage;
+    float hrAllowance, dAllowance, tAllowance, grossSalary;
+
+  
+    printf("Enter base salary: ");
+    scanf("%f", &baseSalary);
+
+    printf("Enter HR  percentage: ");
+    scanf("%f", &hrPercentage);
+
+    printf("Enter D  percentage: ");
+    scanf("%f", &dPercentage);
+
+    printf("Enter T percentage: ");
+    scanf("%f", &tPercentage);
+
+   
+    hrAllowance = (hrPercentage / 100) * baseSalary;
+    dAllowance = (dPercentage / 100) * baseSalary;
+    tAllowance = (tPercentage / 100) * baseSalary;
+
+   
+    grossSalary = baseSalary + hrAllowance + dAllowance + tAllowance;
+
+    printf("Base Salary: %.2f\n", baseSalary);
+    printf("HR Allowance: %.2f\n", hrAllowance);
+    printf("D Allowance: %.2f\n", dAllowance);
+    printf("T Allowance: %.2f\n", tAllowance);
+    printf("Gross Salary: %.2f\n", grossSalary);
+
+    return 0;
+}
+
+Q.3
+
+include <stdio.h>
+
+int main() {
+    
+    float angle1, angle2, thirdAngle;
+
+    
+    printf("Enter the first angle: ");
+    scanf("%f", &angle1);
+
+    printf("Enter the second angle: ");
+    scanf("%f", &angle2);
+
+    
+    thirdAngle = 90 - angle1 - angle2;
+
+   
+    printf("Third angle: %.2f\n", thirdAngle);
+
+    return 0;
+}
